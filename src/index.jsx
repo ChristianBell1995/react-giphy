@@ -31,11 +31,12 @@ class Hello extends Component {
 
   render() {
     // BUILD AND RETURN HTML
+    const { name, surname } = this.props;
     return (
       <div className={this.state.clicked ? 'clicked' : null} onClick={this.handleClick}>
         Hello,
-        {this.props.name}
-        {this.props.surname}
+        {name}
+        {surname}
       </div>
     )
   }
