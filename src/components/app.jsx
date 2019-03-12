@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
 import SearchBar from './search_bar.jsx'
+import Gif from './gif.jsx'
+import GifList from './gif_list.jsx'
 
 
 class App extends Component {
   render() {
+    const gifs = [
+      {id: 'mJ8XzJTfA6BmNb1ykm' },
+      {id: 'lJ0JGfNBrRWJVCRChd' },
+      {id: '90m8XWiWBIEWssXhJJ' }
+    ]
+
     return(
       <div>
         <div className="left-scene">
           <SearchBar />
           <div className="selected-gif">
-
+            <Gif id="lJ0JGfNBrRWJVCRChd" />
           </div>
         </div>
-        <div className="right-scene"></div>
+        <div className="right-scene">
+          <GifList gifs={gifs}/>
+        </div>
       </div>
     )
   }
